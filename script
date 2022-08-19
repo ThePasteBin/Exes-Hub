@@ -24,5 +24,32 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 120,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+        game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = Value
+	end    
+})
+
+Tab:AddSlider({
+	Name = "Jumppower",
+	Min = 0,
+	Max = 200,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jump",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").JumpPower = Value
+	end    
+})
+
+
 
 OrionLib:Init()
