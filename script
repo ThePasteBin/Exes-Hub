@@ -1,0 +1,28 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Exe's Hub", HidePremium = true, SaveConfig = true, ConfigFolder = "DataSaves1", IntroEnabled = false})
+
+if Player.UserId == 327811222 then
+    OrionLib:MakeNotification({
+        Name = "Welcome",
+        Content = "You have been logged in as an admin, ".. Player.Name.. ".",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+OrionLib:MakeNotification({
+	Name = "Executed",
+	Content = "You have executed the hub, ".. Player.Name.. ".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+OrionLib:Init()
